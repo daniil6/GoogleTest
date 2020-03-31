@@ -1,23 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="GoogleTest" Version="10.0.0" InternalType="Console">
+  <VirtualDirectory Name="sign">
+    <File Name="../../Libraries/RBKLib/src/check/sign.cpp"/>
+    <File Name="sign/sign_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="validator">
+    <File Name="../../Libraries/RBKLib/include/check/validator.h"/>
+    <File Name="../../Libraries/RBKLib/src/check/validator.cpp"/>
+    <File Name="validator/validator_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="simple">
+    <File Name="simple/passing.h"/>
+  </VirtualDirectory>
   <VirtualDirectory Name="time">
     <File Name="time/wtime_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="brackets">
-    <File Name="brackets/check_test.h"/>
-    <File Name="../GraphManager/plot/check.h"/>
-    <File Name="../GraphManager/plot/check.cpp"/>
+    <File Name="../../Libraries/RBKLib/src/check/brackets.cpp"/>
+    <File Name="brackets/brackets_test.h"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
         <IncludePath Value="."/>
         <IncludePath Value="$(GOOGLETEST)\googletest\include"/>
+        <IncludePath Value="$(RBKLib)"/>
       </Compiler>
       <Linker Options="">
         <LibraryPath Value="."/>
@@ -106,6 +120,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
 </CodeLite_Project>
