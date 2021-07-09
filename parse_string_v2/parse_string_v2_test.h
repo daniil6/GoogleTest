@@ -17,6 +17,25 @@ protected:
 // [       OK ] GTParseString_v2.ParseString_v2 (75 ms)
 // [----------] 1 test from GTParseString_v2 (80 ms total)
 
+TEST_F(GTParseString_v2, CalculateParseString_v2)
+{
+    TParseResult result;
+    CParseStringV2 parse;
+
+    parse.Make("-2*(-1+1-3)*2/3", result);
+    ASSERT_DOUBLE_EQ(result.value, 4);
+
+    parse.Make("1-4*8", result);
+    ASSERT_DOUBLE_EQ(result.value, -31);
+
+    parse.Make("30", result);
+    ASSERT_DOUBLE_EQ(result.value, 0);
+    // ASSERT_DOUBLE_EQ(result.value, 30); ???
+
+    parse.Make("3.5*4.8", result);
+    ASSERT_DOUBLE_EQ(result.value, 16.80000007748604);
+}
+
 TEST_F(GTParseString_v2, ParseString_v2)
 {
     int i = 0;

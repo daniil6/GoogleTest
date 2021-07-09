@@ -17,6 +17,28 @@ protected:
 // [       OK ] GTParseString_v3.ParseString_v3 (210 ms)
 // [----------] 1 test from GTParseString_v3 (215 ms total)
 
+TEST_F(GTParseString_v3, CalculateParseString_v3)
+{
+    CParseStringV3 parse;
+    CStringTree* tree = nullptr;
+
+    tree = parse.Make("-2*(-1+1-3)*2/3");
+    parse.Calculate(tree);
+    ASSERT_DOUBLE_EQ(tree->GetSecond(), 4);
+
+    tree = parse.Make("1-4*8");
+    parse.Calculate(tree);
+    ASSERT_DOUBLE_EQ(tree->GetSecond(), -31);
+
+    tree = parse.Make("30");
+    parse.Calculate(tree);
+    ASSERT_DOUBLE_EQ(tree->GetSecond(), 30);
+
+    tree = parse.Make("3.5*4.8");
+    parse.Calculate(tree);
+    ASSERT_DOUBLE_EQ(tree->GetSecond(), 16.8);
+}
+
 TEST_F(GTParseString_v3, ParseString_v3)
 {
     int i = 0;
