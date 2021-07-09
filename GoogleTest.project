@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="GoogleTest" Version="11000" InternalType="Console">
+  <VirtualDirectory Name="line_interpolation">
+    <File Name="line_interpolation/line_interpolation_test.h"/>
+  </VirtualDirectory>
   <VirtualDirectory Name="parse_string_v1">
     <File Name="parse_string_v1/parse_string_v1_test.h"/>
   </VirtualDirectory>
@@ -30,8 +33,6 @@
     <File Name="include.h"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="-m32" C_Options="-m32" Assembler="">
@@ -129,4 +130,6 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

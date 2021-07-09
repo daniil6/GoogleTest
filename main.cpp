@@ -1,8 +1,9 @@
 #include "gtest/gtest.h"
 
-#include "parse_string_v1/parse_string_v1_test.h"
-#include "parse_string_v2/parse_string_v2_test.h"
-#include "parse_string_v3/parse_string_v3_test.h"
+#include "line_interpolation/line_interpolation_test.h"
+// #include "parse_string_v1/parse_string_v1_test.h"
+// #include "parse_string_v2/parse_string_v2_test.h"
+// #include "parse_string_v3/parse_string_v3_test.h"
 
 int main(int argc, char** argv)
 {
