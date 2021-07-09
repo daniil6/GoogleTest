@@ -6,8 +6,8 @@
   <VirtualDirectory Name="parse_string_v1">
     <File Name="parse_string_v1/parse_string_v1_test.h"/>
   </VirtualDirectory>
-  <VirtualDirectory Name="WriteToFile">
-    <File Name="WriteToFile/write_file_test.h"/>
+  <VirtualDirectory Name="file">
+    <File Name="file/file_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="copy_array">
     <File Name="copy_array/copy_array.h"/>
@@ -22,7 +22,7 @@
     <File Name="parse_string_v2/parse_string_v2_test.h" ExcludeProjConfig=""/>
   </VirtualDirectory>
   <VirtualDirectory Name="time">
-    <File Name="time/wtime_test.h"/>
+    <File Name="time/time_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="brackets">
     <File Name="brackets/check_test.h"/>
