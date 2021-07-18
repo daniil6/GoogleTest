@@ -1,6 +1,8 @@
 #ifndef GTWTIME_H
 #define GTWTIME_H
 
+#include "wparameters.h"
+
 class GTWTime : public ::testing::Test
 {
 protected:
