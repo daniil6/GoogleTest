@@ -17,6 +17,18 @@ protected:
 // [       OK ] GTParseString_v1.ParseString_v1 (777 ms)
 // [----------] 1 test from GTParseString_v1 (783 ms total)
 
+void Print(StringTree* node, long n)
+{
+    long i;
+    if(node != nullptr) {
+        Print(node->GetLeft(), n + 5);
+        for(i = 0; i < n; i++)
+            printf(" ");
+        std::cout << node->GetData() << std::endl;
+        Print(node->GetRight(), n + 5);
+    }
+}
+
 TEST_F(GTParseString_v1, ParseString_v1)
 {
     int i = 0;
@@ -57,6 +69,7 @@ TEST_F(GTParseString_v1, ParseString_v1)
         // ASSERT_DOUBLE_EQ(result.value, -3);
         parse.DeleteTree(root);
 
+        // root = parse.Make("-2+(3*4-2)*47/2-((-4+3)/2)+(2-7*5)");
         root = parse.Make("-2+(3*4-2)*47/2-(-4+3)/2+(2-7*5)");
 
         tree = root->GetLeft();
