@@ -17,8 +17,9 @@ TEST_F(GTTime, ShowTimeApp)
     unsigned int end_time = clock();
     unsigned int search_time = end_time - start_time;
 
-    printf("%d\n", search_time);
-    system("pause");
+    (void)search_time;
+    // printf("%d\n", search_time);
+    // system("pause");
 }
 
 TEST_F(GTTime, CheckSignShowCompactError)

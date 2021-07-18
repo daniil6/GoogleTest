@@ -8,9 +8,6 @@
   <VirtualDirectory Name="sorting">
     <File Name="sorting/sorting_test.h"/>
   </VirtualDirectory>
-  <VirtualDirectory Name="parsestring_v2">
-    <File Name="parsestring_v2/parsestring_test.h" ExcludeProjConfig=""/>
-  </VirtualDirectory>
   <VirtualDirectory Name="find">
     <File Name="find/find_test.h"/>
   </VirtualDirectory>

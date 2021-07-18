@@ -7,7 +7,6 @@
 #include "parse_string_v1/parse_string_v1_test.h"
 #include "parse_string_v2/parse_string_v2_test.h"
 #include "parse_string_v3/parse_string_v3_test.h"
-#include "parsestring_v2/parsestring_test.h"
 #include "sign/sign_test.h"
 #include "simple/passing_test.h"
 #include "sorting/sorting_test.h"

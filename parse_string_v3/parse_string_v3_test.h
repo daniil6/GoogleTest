@@ -25,18 +25,22 @@ TEST_F(GTParseString_v3, CalculateParseString_v3)
     tree = parse.Make("-2*(-1+1-3)*2/3");
     parse.Calculate(tree);
     ASSERT_DOUBLE_EQ(tree->GetSecond(), 4);
+    CParseStringV3::DeleteTree(tree);
 
     tree = parse.Make("1-4*8");
     parse.Calculate(tree);
     ASSERT_DOUBLE_EQ(tree->GetSecond(), -31);
+    CParseStringV3::DeleteTree(tree);
 
     tree = parse.Make("30");
     parse.Calculate(tree);
     ASSERT_DOUBLE_EQ(tree->GetSecond(), 30);
+    CParseStringV3::DeleteTree(tree);
 
     tree = parse.Make("3.5*4.8");
     parse.Calculate(tree);
     ASSERT_DOUBLE_EQ(tree->GetSecond(), 16.8);
+    CParseStringV3::DeleteTree(tree);
 }
 
 TEST_F(GTParseString_v3, ParseString_v3)
