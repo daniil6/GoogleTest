@@ -1,7 +1,7 @@
 #ifndef GTPASSING_H
 #define GTPASSING_H
 
-#define COUNT_PASSING 10000000
+#include "wparameters.h"
 
 class GTPassing : public ::testing::Test
 {
@@ -17,7 +17,8 @@ protected:
 TEST_F(GTPassing, SendReference)
 {
     int i = 0;
-    while(i++ != COUNT_PASSING) {
+    while(i++ != COUNT_TEST) {
+
         int a = 0;
         SendReference(a);
     }
@@ -26,7 +27,8 @@ TEST_F(GTPassing, SendReference)
 TEST_F(GTPassing, SendPoint)
 {
     int i = 0;
-    while(i++ != COUNT_PASSING) {
+    while(i++ != COUNT_TEST) {
+
         int* a = nullptr;
         SendPoint(a);
     }
@@ -35,7 +37,8 @@ TEST_F(GTPassing, SendPoint)
 TEST_F(GTPassing, SendMass)
 {
     int i = 0;
-    while(i++ != COUNT_PASSING) {
+    while(i++ != COUNT_TEST) {
+
         int a[1] = { 0 };
         SendMass(a);
     }
