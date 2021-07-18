@@ -2,9 +2,7 @@
 
 #include "brackets/brackets_test.h"
 #include "find/find_test.h"
-#include "parse_string_v1/parsestring_v1.h"
-#include "parse_string_v2/parsestring_v2.h"
-#include "parse_string_v3/parsestring_v3.h"
+#include "parsestring_v2/parsestring_test.h"
 #include "sign/sign_test.h"
 #include "simple/passing.h"
 #include "sorting/sorting_test.h"

@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="GoogleTest" Version="10.0.0" InternalType="Console">
+<CodeLite_Project Name="GoogleTest" Version="11000" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+  </Plugins>
+  <VirtualDirectory Name="sorting">
+    <File Name="sorting/sorting_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="parsestring_v2">
+    <File Name="parsestring_v2/parsestring_test.h" ExcludeProjConfig=""/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="find">
+    <File Name="find/find_test.h"/>
+  </VirtualDirectory>
   <VirtualDirectory Name="sign">
-    <File Name="../../Libraries/RBKLib/src/check/sign.cpp"/>
     <File Name="sign/sign_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="validator">
-    <File Name="../../Libraries/RBKLib/include/check/validator.h"/>
-    <File Name="../../Libraries/RBKLib/src/check/validator.cpp"/>
     <File Name="validator/validator_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="simple">
@@ -16,12 +27,12 @@
     <File Name="time/wtime_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="brackets">
-    <File Name="../../Libraries/RBKLib/src/check/brackets.cpp"/>
     <File Name="brackets/brackets_test.h"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="wparameters.h"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
@@ -30,21 +41,26 @@
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
         <IncludePath Value="."/>
+        <IncludePath Value="$(RBKLib)\include"/>
         <IncludePath Value="$(GOOGLETEST)\googletest\include"/>
-        <IncludePath Value="$(RBKLib)"/>
+        <IncludePath Value="$(GOOGLETEST)\googlemock\include"/>
       </Compiler>
       <Linker Options="">
         <LibraryPath Value="."/>
         <LibraryPath Value="$(GOOGLETEST)\lib"/>
+        <LibraryPath Value="$(RBKLib)\$(ConfigurationName)"/>
         <Library Value="gtest"/>
+        <Library Value="gmock"/>
       </Linker>
       <ResourceCompiler Options=""/>
     </GlobalSettings>
-    <Configuration Name="Debug" CompilerType="MinGW-W64 7.3.0" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+    <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-64 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
       </Compiler>
-      <Linker Options="" Required="yes"/>
+      <Linker Options="" Required="yes">
+        <Library Value="rbkd"/>
+      </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
