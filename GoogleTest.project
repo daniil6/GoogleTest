@@ -21,10 +21,31 @@
     <File Name="validator/validator_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="simple">
-    <File Name="simple/passing.h"/>
+    <File Name="simple/passing_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="line_interpolation">
+    <File Name="line_interpolation/line_interpolation_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="parse_string_v1">
+    <File Name="parse_string_v1/parse_string_v1_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="file">
+    <File Name="file/file_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="copy_array">
+    <File Name="copy_array/copy_array.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="bit_operation">
+    <File Name="bit_operation/bit_operation_test.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="parse_string_v3">
+    <File Name="parse_string_v3/parse_string_v3_test.h" ExcludeProjConfig=""/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="parse_string_v2">
+    <File Name="parse_string_v2/parse_string_v2_test.h" ExcludeProjConfig=""/>
   </VirtualDirectory>
   <VirtualDirectory Name="time">
-    <File Name="time/wtime_test.h"/>
+    <File Name="time/time_test.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="brackets">
     <File Name="brackets/brackets_test.h"/>
@@ -40,15 +61,13 @@
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
-        <IncludePath Value="."/>
-        <IncludePath Value="$(RBKLib)\include"/>
-        <IncludePath Value="$(GOOGLETEST)\googletest\include"/>
-        <IncludePath Value="$(GOOGLETEST)\googlemock\include"/>
+        <IncludePath Value="$(RBKLib)/include"/>
+        <IncludePath Value="$(GOOGLETEST)/googletest/include"/>
+        <IncludePath Value="$(GOOGLETEST)/googlemock/include"/>
       </Compiler>
       <Linker Options="">
-        <LibraryPath Value="."/>
-        <LibraryPath Value="$(GOOGLETEST)\lib"/>
-        <LibraryPath Value="$(RBKLib)\$(ConfigurationName)"/>
+        <LibraryPath Value="$(GOOGLETEST)/lib"/>
+        <LibraryPath Value="$(RBKLib)/$(ConfigurationName)"/>
         <Library Value="gtest"/>
         <Library Value="gmock"/>
       </Linker>
@@ -95,12 +114,14 @@
         <SearchPaths/>
       </Completion>
     </Configuration>
-    <Configuration Name="Release" CompilerType="MinGW-W64 7.3.0" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+    <Configuration Name="Release" CompilerType="MinGW ( TDM-GCC-64 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
         <Preprocessor Value="NDEBUG"/>
       </Compiler>
-      <Linker Options="" Required="yes"/>
+      <Linker Options="" Required="yes">
+        <Library Value="rbk"/>
+      </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
