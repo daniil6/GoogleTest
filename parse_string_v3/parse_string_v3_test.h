@@ -7,8 +7,8 @@
 class GTParseString_v3 : public ::testing::Test
 {
 protected:
-    void SetUp() override{};
-    void TearDown() override{};
+    void SetUp() override {};
+    void TearDown() override {};
 };
 
 // MAIN_COUNT == 1000

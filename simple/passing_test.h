@@ -6,12 +6,12 @@
 class GTPassing : public ::testing::Test
 {
 protected:
-    void SetUp() override{};
-    void TearDown() override{};
+    void SetUp() override {};
+    void TearDown() override {};
 
-    void SendReference(int& a){};
-    void SendPoint(int* a){};
-    void SendMass(int a[]){};
+    void SendReference(int& a) {};
+    void SendPoint(int* a) {};
+    void SendMass(int a[]) {};
 };
 
 TEST_F(GTPassing, SendReference)
