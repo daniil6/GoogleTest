@@ -1,20 +1,20 @@
 #include "gtest/gtest.h"
 
-/*#include "brackets/brackets_test.h"*/
-// #include "file/file_test.h"
-/*#include "find/find_test.h"
+#include "compare/compare_test.h"
+#include "brackets/brackets_test.h"
+#include "file/file_test.h"
+#include "find/find_test.h"
 #include "line_interpolation/line_interpolation_test.h"
 #include "parse_string_v1/parse_string_v1_test.h"
 #include "parse_string_v2/parse_string_v2_test.h"
+#include "queue/queue_test.h"
 #include "parse_string_v3/parse_string_v3_test.h"
 #include "sign/sign_test.h"
 #include "simple/passing_test.h"
 #include "sorting/sorting_test.h"
 #include "time/time_test.h"
 #include "time/wtime_test.h"
-#include "validator/validator_test.h"*/
-
-#include "queue/queue_test.h"
+#include "validator/validator_test.h"
 
 // ASSERT_EQ(result, false); - прекращает тест
 // EXPECT_EQ(result, false); - тест продолжается
