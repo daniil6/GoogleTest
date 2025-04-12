@@ -43,6 +43,17 @@ TEST_F(GTParseString_v3, CalculateParseString_v3)
     CParseStringV3::DeleteTree(tree);
 }
 
+TEST_F(GTParseString_v3, Calculate_0)
+{
+    CParseStringV3 parse;
+    CStringTree* tree = nullptr;
+
+    tree = parse.Make("-113149816.21*-1"); // Need error status: SYNTAX ERROR
+    parse.Calculate(tree);
+    ASSERT_DOUBLE_EQ(tree->GetSecond(), 113149816.21);
+    CParseStringV3::DeleteTree(tree);
+}
+
 TEST_F(GTParseString_v3, ParseString_v3)
 {
     int i = 0;
