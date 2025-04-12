@@ -24,11 +24,12 @@ int main(int argc, char** argv)
 {
     argc++;
     char argvGT0[] = { "--gtest_repeat=1" };
+
     // argc++;
     // char argvGT1[] = { "--gtest_break_on_failure" };
-    // argc++;
 
-    // char argvGT2[] = { "--gtest_filter=GTPassing.*" };
+    // argc++;
+    // char argvGT2[] = { "--gtest_filter=GTPassing.*" }; // Include
 
     // argc++;
     // char argvGT2[] = { "--gtest_filter=GTValidator.ValidatorPoint" };
@@ -41,7 +42,10 @@ int main(int argc, char** argv)
     // argc++;
     // char argvGT3[] = { "--gtest_filter=GTBrackets.*-GTBrackets.CheckSign" };
 
-    char* chNewArgv[argc] = { argv[0], argvGT0 };
+    argc++;
+    char argvGT4[] = { "--gtest_filter=-GTArgs.*" }; // Exclude
+
+    char* chNewArgv[argc] = { argv[0], argvGT0, argvGT4 };
 
     ::testing::InitGoogleTest(&argc, chNewArgv);
 

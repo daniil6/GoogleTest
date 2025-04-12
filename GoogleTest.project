@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="GoogleTest" Version="11000" InternalType="Console">
+  <VirtualDirectory Name="args">
+    <File Name="args/args_test.cpp"/>
+  </VirtualDirectory>
   <VirtualDirectory Name="array_vs_point">
     <File Name="array_vs_point/array_vs_point_test.cpp"/>
   </VirtualDirectory>
